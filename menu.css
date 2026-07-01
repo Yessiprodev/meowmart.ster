@@ -1,0 +1,101 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+body {
+    margin: 0;
+    padding: 0;
+    background: #fbfbfb;
+    font-family: 'Poppins', sans-serif;
+}
+
+.header {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.header h1 {
+    color: #622da4;
+    font-size: 48px;
+    margin: 0;
+}
+
+.header h5 {
+    color: #bc88dc;
+    font-size: 23px;
+    margin-top: 10px;
+}
+
+.main-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 50px;
+    gap: 100px;
+}
+
+.left {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.right {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    align-items: center;
+}
+
+button {
+    font-family: 'Poppins', sans-serif;
+    border-radius: 25px;
+    background: linear-gradient(to left, #a38fd2, #9d82e1, #805bd8);
+    color: #fff;
+    border: none;
+    position: relative;
+    right: 80px;
+    /* Geser ke kanan */
+    top: -25px;
+    /* Geser ke atas */
+    height: 45px;
+    width: 350px;
+    font-size: 20px;
+    padding: 0 2em;
+    cursor: pointer;
+    outline: none;
+    overflow: hidden;
+    /* Animasi garis tetap di dalam tombol */
+    transition: background 800ms ease, color 800ms ease;
+}
+
+button:hover {
+    background: #fff;
+    color: #000;
+}
+
+
+/* Garis animasi atas & bawah */
+
+button::before,
+button::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: linear-gradient(to left, #afa2f2, #826af7, #4828eb);
+    transition: width 400ms ease;
+}
+
+button::before {
+    top: 0;
+}
+
+button::after {
+    bottom: 0;
+}
+
+button:hover::before,
+button:hover::after {
+    width: 100%;
+    transition: width 800ms ease;
+}

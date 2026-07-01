@@ -1,0 +1,46 @@
+  /* CSS untuk tombol berputar */
+  
+  .gradient-btn {
+      background: linear-gradient(270deg, #ff9966, #ff5e62, #ffc371);
+      background-size: 600% 600%;
+      animation: spinGradient 10s ease infinite;
+      color: white;
+      border: none;
+      padding: 10px 22px;
+      margin: 6px 4px;
+      border-radius: 14px;
+      font-size: 16px;
+      font-weight: bold;
+      cursor: pointer;
+      transition: all 0.4s ease;
+      box-shadow: 0 4px 10px rgba(255, 94, 98, 0.3);
+  }
+  
+  .gradient-btn:hover {
+      background: linear-gradient(270deg, #ffe29f, #ffa69e, #ff5e62);
+      background-size: 400% 400%;
+      animation: spinHover 5s ease infinite;
+      transform: scale(1.07);
+      box-shadow: 0 0 12px rgba(255, 94, 98, 0.5);
+  }
+  
+  @keyframes spinGradient {
+      0% {
+          background-position: 0% 50%;
+      }
+      50% {
+          background-position: 100% 50%;
+      }
+      100% {
+          background-position: 0% 50%;
+      }
+  }
+  
+  @keyframes spinHover {
+      0% {
+          background-position: 0% 50%;
+      }
+      100% {
+          background-position: 100% 50%;
+      }
+  }
